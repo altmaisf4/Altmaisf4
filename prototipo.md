@@ -1,6 +1,21 @@
 altmaisf4-Loja de games/
 │
-├─ README.md
+├─ # Projeto Altmaisf4 - Loja de jogos digitais
+
+Este repositório contém a documentação, backlog, prototipagem e artefatos do projeto **Altmaisf4**
+
+## Estrutura
+- `backlog.md` → lista de funcionalidades planejadas (backlog do projeto)
+- `artefatos/` → capturas de tela, exportações de dados e documentos
+- `prototipos/` → protótipos das telas do site
+- `README.md` → este arquivo explicativo
+
+## Objetivo
+Organizar as entregas do projeto acadêmico, incluindo:
+1. Backlog
+2. Entrega de artefato
+3. Prototipagem
+
 ├─ prototipos/
 │    ├─ Cadastro: <img width="1324" height="606" alt="cadastro" src="https://github.com/user-attachments/assets/9bd2e7b7-1238-4934-8c8a-b49a68be7caf" />
 
