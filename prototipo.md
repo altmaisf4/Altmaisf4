@@ -1,12 +1,16 @@
-# Protótipo do Site Altmaisf4
+altmaisf4-site123/
+│
+├─ README.md
+├─ prototipos/
+│    ├─ Caastro: <img width="1324" height="606" alt="cadastro" src="https://github.com/user-attachments/assets/9bd2e7b7-1238-4934-8c8a-b49a68be7caf" />
 
-## Tela Incial
-![Tela inicial](<img width="1362" height="537" alt="Telaincial" src="https://github.com/user-attachments/assets/b8c4ca93-5230-456c-b072-f9cae8a63758" />)
+│    ├─ Tela inical: <img width="1362" height="537" alt="Telaincial" src="https://github.com/user-attachments/assets/11a318eb-5252-4e3b-bb4a-a778d6381f86" />
+ 
+│    └─ loja: <img width="1366" height="607" alt="loja" src="https://github.com/user-attachments/assets/e10550a4-69d0-4d4b-8b7b-f5b9953ace6c" />
 
-## Tela de cadastro
-![Tela de cadastro](<img width="1324" height="606" alt="cadastro" src="https://github.com/user-attachments/assets/e840655b-6929-4121-8569-520223a5e411" />)
-
-## Tela da loja
-![Tela da loja](<img width="1366" height="607" alt="loja" src="https://github.com/user-attachments/assets/3758663c-27ae-42c1-a35c-b3c94adebb87" />)
-
-
+├─ documentos/
+│    ├─ requisitos.md
+│    └─ roteiro_usuario.md
+└─ artefatos/
+     ├─ diagrama_fluxo.drawio
+     └─ referencias.md
