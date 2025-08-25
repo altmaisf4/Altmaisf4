@@ -2,7 +2,7 @@ altmaisf4-site123/
 │
 ├─ README.md
 ├─ prototipos/
-│    ├─ Caastro: <img width="1324" height="606" alt="cadastro" src="https://github.com/user-attachments/assets/9bd2e7b7-1238-4934-8c8a-b49a68be7caf" />
+│    ├─ Cadastro: <img width="1324" height="606" alt="cadastro" src="https://github.com/user-attachments/assets/9bd2e7b7-1238-4934-8c8a-b49a68be7caf" />
 
 │    ├─ Tela inical: <img width="1362" height="537" alt="Telaincial" src="https://github.com/user-attachments/assets/11a318eb-5252-4e3b-bb4a-a778d6381f86" />
  
