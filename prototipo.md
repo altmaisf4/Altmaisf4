@@ -1,4 +1,4 @@
-altmaisf4-site123/
+altmaisf4-Loja de games/
 │
 ├─ README.md
 ├─ prototipos/
