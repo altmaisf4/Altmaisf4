@@ -8,4 +8,7 @@
  
  loja: 
 <img width="1366" height="607" alt="loja" src="https://github.com/user-attachments/assets/e10550a4-69d0-4d4b-8b7b-f5b9953ace6c" />
+ site: 
+68ab216f912c1.site123.me
+
 
