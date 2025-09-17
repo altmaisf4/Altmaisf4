@@ -15,5 +15,5 @@ Organizar as entregas do projeto acadêmico, incluindo:
 3. Prototipagem
 
 ## Site:
-68ab216f912c1.site123.me
+https://68ab216f912c1.site123.me/
 
