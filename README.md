@@ -14,6 +14,4 @@ Organizar as entregas do projeto acadêmico, incluindo:
 2. Entrega de artefato
 3. Prototipagem
 
-## Site:
-http://127.0.0.1:5500/Cadastro.html
 
