@@ -304,4 +304,55 @@ document.addEventListener('DOMContentLoaded',() => {
       showToast('Carrinho esvaziado.');
     }
   });
+
+});
+
+// ... (dentro do seu arquivo script.js)
+
+// ----------------------------------------------------
+// NOVO: FUNÇÃO DE FINALIZAÇÃO DE COMPRA
+// ----------------------------------------------------
+function handleCheckout() {
+  const cart = getCart();
+  if (cart.length === 0) {
+    showToast('Seu carrinho está vazio!');
+    return;
+  }
+
+  // 1. Simulação do processo de checkout (APENAS UM ALERTA)
+  const total = cart.reduce((sum, item) => {
+    const product = PRODUCTS.find(p => p.id === item.id);
+    return sum + (product ? product.price * item.qty : 0);
+  }, 0);
+  
+  alert(`Finalizando compra... Total: R$ ${total.toFixed(2).replace('.', ',')}. (Esta é uma simulação. Em um site real, você seria redirecionado para um portal de pagamento.)`);
+
+  // 2. Limpar o carrinho e fechar o modal
+  clearCart();
+  document.getElementById('cartModal').classList.add('hidden');
+  showToast('Compra finalizada com sucesso! Obrigado!');
+}
+
+// ...
+
+// ... (dentro do document.addEventListener('DOMContentLoaded', ...)
+
+  // Listeners para o Modal do Carrinho
+  // ... (variáveis existentes)
+  const clearCartBtn = $('#clearCart');
+  // NOVO:
+  const checkoutBtn = cartModal.querySelector('.cart-actions .primary'); // Seleciona o botão principal de Finalizar Compra
+
+  // ... (listeners existentes)
+
+  if (clearCartBtn) clearCartBtn.addEventListener('click',() => {
+    if(confirm('Deseja esvaziar o carrinho?')){ 
+      clearCart(); 
+      renderCartModal(); 
+      showToast('Carrinho esvaziado.');
+    }
+  });
+  
+  // NOVO LISTENER:
+  if (checkoutBtn) checkoutBtn.addEventListener('click', handleCheckout); 
 });
