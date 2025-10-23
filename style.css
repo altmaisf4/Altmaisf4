@@ -1,0 +1,577 @@
+/* ===============================
+   VARIÁVEIS DE TEMA ESCURO (Cyberpunk/Gamer Theme)
+   =============================== */
+:root {
+    --bg-color: #0d1117; /* Fundo principal escuro */
+    --card-color: #161b22; /* Fundo de blocos e cards */
+    --text-color: #e6edf3; /* Texto principal claro */
+    --muted-color: #8b949e; /* Texto secundário/pequeno */
+    --primary-color: #00ff99; /* Cor de ação principal (Neon Green) */
+    --primary-dark: #00cc7a;
+    --danger-color: #ff4d4f; /* Cor de perigo (vermelho) */
+    --success-color: #00ff99; /* Cor de sucesso */
+    --accent-color: #58a6ff; /* Cor de link/acento (Neon Blue) */
+    --border-color: #30363d; /* Cor de bordas e linhas */
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ===============================
+   HEADER E NAVEGAÇÃO
+   =============================== */
+.site-header {
+    background-color: var(--card-color);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.main-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 1rem;
+    padding: 5px 0;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* ===============================
+   BOTÕES (BUTTONS)
+   =============================== */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn.primary {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.btn.primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.btn.danger {
+    background-color: var(--danger-color);
+    color: var(--text-color);
+}
+
+.btn.danger:hover {
+    background-color: #cc3c3f;
+    transform: translateY(-1px);
+}
+
+.btn.small {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+}
+
+.btn.large {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.cart-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+#cartCount {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* ===============================
+   SEÇÕES GERAIS E SOBRE NÓS
+   =============================== */
+.site-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 60px 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section.block {
+    background-color: var(--card-color);
+    border-radius: 8px;
+    margin: 40px 20px;
+    padding: 40px;
+    border: 1px solid var(--border-color);
+}
+
+.block-inner {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.block-media {
+    flex: 0 0 35%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid var(--primary-dark);
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.5); 
+    transition: box-shadow 0.3s ease;
+}
+
+.block-media:hover {
+    box-shadow: 0 0 25px var(--primary-color);
+}
+
+.block-media img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+    display: block;
+}
+
+.block-content {
+    flex: 1;
+}
+
+.block-content p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+
+.hero {
+    /* CORREÇÃO: Alterado de banner.jpg para banner.png */
+    background: linear-gradient(rgba(13, 17, 23, 0.7), var(--bg-color) 90%), url('images/banner.png') no-repeat center top/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.hero-content {
+    padding: 0; 
+    max-width: 800px;
+}
+
+/* ... (restante do código CSS) ... */
+.hero-content {
+    /* Removido o background/border/shadow intenso para restaurar o visual */
+    padding: 0; 
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px var(--primary-color);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+/* ===============================
+   SERVIÇOS
+   =============================== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.service-card {
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* ===============================
+   PRODUTOS (GRID) - SEPARAÇÃO CATEGORIA/BOTÃO
+   =============================== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px var(--shadow-color);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.product-name h3 {
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    padding: 10px 15px 5px;
+}
+
+.product-category p {
+    color: var(--muted-color);
+    font-size: 0.9rem;
+    /* Linha de separação e padding para separar do rodapé */
+    padding: 0 15px 15px; 
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 0;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    /* Removido border-top, pois a separação está em .product-category p */
+}
+
+.product-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+
+/* ===============================
+   CONTATO SIMPLIFICADO
+   =============================== */
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--card-color);
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.4);
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.contact-email-large {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.contact-email-large a {
+    color: inherit;
+    text-decoration: none;
+    transition: text-decoration 0.2s;
+}
+
+.contact-email-large a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   FORMULÁRIOS E MODAL DE LOGIN
+   =============================== */
+.form label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 20px; 
+    font-weight: bold;
+    color: var(--primary-color); 
+    font-size: 0.95rem; 
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+    width: 100%;
+    padding: 12px; 
+    border: 1px solid var(--border-color);
+    border-radius: 6px; 
+    background-color: var(--bg-color); 
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 8px var(--primary-color); 
+    background-color: #1a232e; 
+}
+
+.forgot-link {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.modal {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--card-color);
+    padding: 30px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.5);
+}
+
+/* Estilo das Abas (Login/Registro) */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--border-color); 
+}
+
+.tab {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    padding: 10px 0;
+    cursor: pointer;
+    color: var(--muted-color);
+    font-weight: bold;
+    transition: color 0.2s, border-bottom 0.2s, box-shadow 0.2s;
+    border-bottom: 3px solid transparent;
+}
+
+.tab:hover {
+    color: var(--text-color);
+}
+
+.tab.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    box-shadow: 0 4px 10px -5px var(--primary-color); 
+}
+
+.form {
+    padding-top: 20px; 
+}
+
+.form:not(.active) {
+    display: none;
+}
+
+/* ===============================
+   CARRINHO E TOAST
+   =============================== */
+.cart-items {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.cart-summary {
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 2px solid var(--primary-color);
+    font-size: 1.2rem;
+    text-align: right;
+    color: var(--primary-color);
+}
+
+.cart-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* TOAST E ANIMAÇÕES */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    z-index: 3000;
+    border: 2px solid;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    animation: slideInFromRight 0.3s ease-out;
+}
+
+.toast.hidden {
+    display: none;
+}
+
+.toast.success { border-color: var(--primary-color); color: var(--primary-color); }
+.toast.error { border-color: var(--danger-color); color: var(--danger-color); }
+.toast.info { border-color: var(--accent-color); color: var(--accent-color); }
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ===============================
+   MEDIA QUERIES (Responsividade)
+   =============================== */
+@media (max-width: 900px) {
+    .main-nav {
+        display: none; 
+    }
+
+    .header-inner {
+        padding: 10px 3%;
+    }
+    
+    .brand-name {
+        display: none;
+    }
+    
+    .brand {
+        font-size: 1.3rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .block-inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .block-media {
+        flex: 1; 
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr; 
+    }
+}
