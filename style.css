@@ -1,0 +1,713 @@
+/* ===============================
+   VARIÁVEIS DE TEMA ESCURO (Cyberpunk/Gamer Theme)
+   =============================== */
+:root {
+    --bg-color: #0d1117; /* Fundo principal escuro */
+    --card-color: #161b22; /* Fundo de blocos e cards */
+    --text-color: #e6edf3; /* Texto principal claro */
+    --muted-color: #8b949e; /* Texto secundário/pequeno */
+    --primary-color: #00ff99; /* Cor de ação principal (Neon Green) */
+    --primary-dark: #00cc7a;
+    --danger-color: #ff4d4f; /* Cor de perigo (vermelho) */
+    --success-color: #00ff99; /* Cor de sucesso */
+    --accent-color: #58a6ff; /* Cor de link/acento (Neon Blue) */
+    --border-color: #30363d; /* Cor de bordas e linhas */
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.5em;
+    border-bottom: 3px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 40px;
+}
+
+
+/* ===============================
+   HEADER E NAVEGAÇÃO
+   =============================== */
+.site-header {
+    background-color: var(--card-color);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.main-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 0;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+
+/* ===============================
+   BOTÕES (BUTTONS)
+   =============================== */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn.primary {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.btn.primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn.accent {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.btn.accent:hover {
+    background-color: #4a8ee0;
+}
+
+.btn.danger {
+    background-color: var(--danger-color);
+    color: var(--text-color);
+    border: 1px solid var(--danger-color);
+}
+
+.btn.danger:hover {
+    background-color: #d13a3c;
+}
+
+.btn.small {
+    padding: 8px 12px;
+    font-size: 0.9em;
+}
+
+.btn.large {
+    padding: 12px 25px;
+    font-size: 1.1em;
+}
+
+.btn.full-width {
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+/* ===============================
+   HERO SECTION
+   =============================== */
+.hero {
+    background: url('images/banner.png') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(13, 17, 23, 0.7); /* Sobreposição escura */
+}
+
+.hero-content {
+    z-index: 10;
+    color: var(--text-color);
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+
+/* ===============================
+   SEÇÃO DE PRODUTOS/CARDS
+   =============================== */
+#products-section {
+    padding-top: 50px;
+}
+
+.product-card {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s;
+    margin: 10px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 255, 153, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    /* Altura será ajustada no final do CSS para carrossel */
+}
+
+.product-info-top {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.product-age-rating {
+    background-color: var(--danger-color);
+    color: var(--text-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.product-name h3 {
+    padding: 0 10px;
+    margin: 5px 0;
+    font-size: 1.2em;
+    text-align: left;
+    color: var(--accent-color);
+}
+
+.product-category p {
+    padding: 0 10px 10px;
+    font-size: 0.9em;
+    color: var(--muted-color);
+    text-align: left;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid var(--border-color);
+}
+
+.product-price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+
+/* ===============================
+   CARROSSEL (Geral)
+   =============================== */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-card {
+    min-width: calc(33.333% - 20px); /* 3 cards por vista (10px de margin em cada lado = 20px) */
+    margin: 10px;
+}
+
+.carousel-btn {
+    background-color: var(--card-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s, color 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.carousel-btn.prev {
+    left: -20px;
+}
+
+.carousel-btn.next {
+    right: -20px;
+}
+
+
+/* ===============================
+   RODAPÉ E SEÇÕES GERAIS
+   =============================== */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--card-color);
+    border-top: 1px solid var(--border-color);
+    color: var(--muted-color);
+    font-size: 0.9em;
+    margin-top: 50px;
+}
+
+.text-section p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+.service-card {
+    background-color: var(--card-color);
+    padding: 30px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    margin: 10px;
+    transition: border-color 0.3s;
+    border: 1px solid var(--border-color);
+}
+
+.service-card:hover {
+    border-color: var(--accent-color);
+}
+
+.service-card i {
+    font-size: 3em;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: var(--text-color);
+    font-size: 1.3em;
+}
+
+/* Formulário de Contato */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--card-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    margin-top: 20px;
+}
+
+
+/* ===============================
+   MODAL DE AUTENTICAÇÃO E CARRINHO
+   =============================== */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: var(--card-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 30px var(--shadow-color);
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    border: 2px solid var(--primary-color);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    color: var(--muted-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.tab-container {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tab {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    padding: 10px 0;
+    color: var(--muted-color);
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    font-weight: bold;
+}
+
+.form {
+    display: none;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.form.active {
+    display: block;
+}
+
+.form-instruction {
+    color: var(--muted-color);
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.modal-content input[type="email"],
+.modal-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.small-link {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    color: var(--accent-color);
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.small-link:hover {
+    text-decoration: underline;
+}
+
+/* Carrinho Modal */
+#cartModal .modal-content {
+    max-width: 500px;
+}
+
+.cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.empty-cart-message {
+    text-align: center;
+    color: var(--muted-color);
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+/* ===============================
+   TOAST NOTIFICATION
+   =============================== */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    z-index: 3000;
+    border: 2px solid;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    animation: slideInFromRight 0.3s ease-out;
+}
+
+.toast.hidden {
+    display: none;
+}
+
+.toast.success { border-color: var(--primary-color); color: var(--primary-color); }
+.toast.error { border-color: var(--danger-color); color: var(--danger-color); }
+.toast.info { border-color: var(--accent-color); color: var(--accent-color); }
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ===============================
+   AJUSTES VISUAIS DOS PRODUTOS
+   =============================== */
+/* Garante que as imagens se comportem bem em ambos os carrosséis */
+.product-card .product-image,
+.carousel-card .product-image {
+    width: 100%; 
+    height: 250px; /* Altura fixa para alinhar os cards */
+    /* object-fit: cover é crucial para preencher o espaço sem distorcer, cortando o excesso */
+    object-fit: cover; 
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 10px;
+}
+
+/* ===============================
+   AJUSTES PARA A SEÇÃO SOBRE
+   =============================== */
+.about-cards-container {
+    /* Reutiliza a formatação de flexbox da seção .services */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.about-card {
+    /* Garante que os cards na seção Sobre usem a mesma largura */
+    width: 30%; 
+    min-width: 280px; /* Garante que não fiquem muito pequenos */
+    margin: 10px;
+}
+
+.text-section p {
+    /* Centraliza e limita o parágrafo principal */
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 20px; /* Adiciona um espaço antes dos novos cards */
+}
+
+
+/* ===============================
+   MEDIA QUERIES (Responsividade)
+   =============================== */
+@media (max-width: 900px) {
+    .header-inner {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .main-nav {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .main-nav a {
+        margin: 0 8px;
+        font-size: 0.9em;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .service-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /* Regra de responsividade para os novos cards de "Sobre" */
+    .about-card {
+        width: 100%;
+    }
+    
+    .carousel-btn.prev {
+        left: 0;
+    }
+
+    .carousel-btn.next {
+        right: 0;
+    }
+
+    /* 1 card por vista em telas menores */
+    .carousel-card {
+        min-width: calc(100% - 20px); 
+    }
+}

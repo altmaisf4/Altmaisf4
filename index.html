@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Alt+F4 — Loja de Jogos Digitais</title>
+  <link rel="icon" href="images/ALTMAISF4.png">  
+  <link rel="stylesheet" href="style.css">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  </head>
+<body>  
+  
+  <header class="site-header">    
+    <div class="header-inner">      
+      <div class="brand">        
+        <img src="images/ALTMAISF4.png" alt="Alt+F4" class="logo">        
+        <span class="brand-name">Alt+F4</span>      </div>      
+      <nav class="main-nav">        
+        <a href="#about">Sobre</a>        
+        <a href="#services">Serviços</a>        
+        <a href="#products-section">Jogos</a>        
+        <a href="#contact">Contato</a>      </nav>      
+      <div class="header-actions">        
+        <a href="#" id="loginLink" class="btn small">Login / Registro</a>        
+        <button id="logoutBtn" class="btn small danger hidden">          
+          <i class="fas fa-sign-out-alt"></i>        </button>        
+        <button id="cartBtn" class="btn small accent">          
+          <i class="fas fa-shopping-cart"></i> Carrinho (<span id="cartCount">0</span>)        </button>      </div>    
+    </div>  
+  </header>  
+  
+  <main>    
+    <section id="hero" class="hero">      
+      <div class="hero-content">        
+        <h1>SUA PRÓXIMA AVENTURA COMEÇA AQUI.</h1>        
+        <p>A maior coleção de jogos digitais com as melhores ofertas e segurança Firebase.</p>        
+        <a href="#products-section" class="btn primary large">Ver Jogos</a>      </div>    
+    </section>    
+    
+    <section id="carousel-section" class="container">      
+      <h2>Destaques da Semana</h2>      
+      <div class="carousel-container">        
+        <button class="carousel-btn prev" id="carouselPrev"><i class="fas fa-chevron-left"></i></button>        
+        <div class="carousel-track-container">          
+          <div class="carousel-track" id="carouselTrack">
+            </div>        
+        </div>        
+        <button class="carousel-btn next" id="carouselNext"><i class="fas fa-chevron-right"></i></button>      
+      </div>    
+    </section>    
+    
+    <section id="products-section" class="container">      
+      
+      <h2>Nosso Catálogo Completo</h2>      
+      <div class="carousel-container" style="margin-top: 20px;">
+        <button class="carousel-btn prev" id="catalogPrev"><i class="fas fa-chevron-left"></i></button>
+        <div class="carousel-track-container">
+            <div class="carousel-track" id="catalogTrack">
+              </div>
+        </div>
+        <button class="carousel-btn next" id="catalogNext"><i class="fas fa-chevron-right"></i></button>
+      </div>    
+      </section>    
+    
+    <section id="about" class="container text-section">      
+      <h2>Sobre a Alt+F4</h2>      
+      <p>Nascemos da paixão por games. Nosso objetivo é oferecer uma plataforma rápida, segura e com uma curadoria de títulos que todo gamer adora.</p>
+      
+      <div class="about-cards-container">
+        
+        <div class="service-card about-card">        
+          <i class="fas fa-gamepad"></i>        
+          <h3>Foco no Gamer</h3>        
+          <p>Curadoria de títulos AAA e indies, sempre pensando na comunidade.</p>      
+        </div>      
+        
+        <div class="service-card about-card">        
+          <i class="fas fa-server"></i>        
+          <h3>Tecnologia de Ponta</h3>        
+          <p>Utilizamos a robustez do Firebase para garantir segurança e escalabilidade.</p>      
+        </div>
+        
+        <div class="service-card about-card">        
+          <i class="fas fa-handshake"></i>        
+          <h3>Compromisso</h3>        
+          <p>Transparência total e suporte dedicado em cada etapa da sua compra.</p>      
+        </div> 
+
+      </div>
+      </section>    
+    
+    <section id="services" class="container services">      
+      <h2>Nossos Serviços</h2>      
+      <div class="service-card">        
+        <i class="fas fa-lock"></i>        
+        <h3>Segurança Firebase</h3>        
+        <p>Autenticação robusta e armazenamento seguro de dados.</p>      </div>      
+      <div class="service-card">        
+        <i class="fas fa-key"></i>        
+        <h3>Entrega Imediata</h3>        
+        <p>Chaves digitais entregues na hora após a confirmação da compra.</p>      </div>      
+      <div class="service-card">        
+        <i class="fas fa-headset"></i>        
+        <h3>Suporte 24/7</h3>        
+        <p>Atendimento rápido e eficiente para todas as suas dúvidas.</p>      </div>    
+    </section>    
+    
+    <section id="contact" class="container">      
+      <h2>Fale Conosco</h2>      
+      <form id="contactForm" class="contact-form">        
+        <label for="contactName">Nome</label>        
+        <input type="text" id="contactName" name="name" required>        
+        <label for="contactEmail">E-mail</label>        
+        <input type="email" id="contactEmail" name="email" required>        
+        <label for="contactMessage">Mensagem</label>        
+        <textarea id="contactMessage" name="message" rows="5" required></textarea>        
+        <button type="submit" id="submitContactBtn" class="btn primary large">Enviar Mensagem</button>      
+      </form>    
+    </section>  
+  </main>  
+  
+  <footer class="site-footer">    
+    <p>&copy; <span id="year">2024</span> Alt+F4 - Todos os direitos reservados. | Desenvolvido com Firebase.</p>  
+  </footer>  
+  
+  <div id="authModal" class="modal hidden">    
+    <div class="modal-content">      
+      <button class="close" id="closeAuthModal">×</button>      
+      <div class="tab-container">        
+        <button class="tab active" id="loginTab" data-form="loginForm">Login</button>        
+        <button class="tab" id="signupTab" data-form="signupForm">Registro</button>      </div>      
+      
+      <form id="loginForm" class="form active">        
+        <p class="form-instruction">Entre com sua conta para acessar seus jogos e finalizar compras.</p>        
+        <label for="loginUser">E-mail</label>        
+        <input type="email" id="loginUser" placeholder="seu.email@exemplo.com" required>        
+        <label for="loginPass">Senha</label>        
+        <input type="password" id="loginPass" placeholder="••••••" required>        
+        <button type="submit" class="btn primary full-width">Entrar</button>        
+        <a href="#" id="forgotPasswordLink" class="small-link">Esqueci minha senha</a>      </form>      
+      
+      <form id="signupForm" class="form hidden">        
+        <p class="form-instruction">Crie uma conta em segundos.</p>        
+        <label for="signupEmail">E-mail</label>        
+        <input type="email" id="signupEmail" placeholder="seu.email@exemplo.com" required>        
+        <label for="signupPass">Senha</label>        
+        <input type="password" id="signupPass" placeholder="Mínimo 6 caracteres" required>        
+        <button type="submit" class="btn primary full-width">Registrar</button>      </form>      
+      
+      <form id="forgotPassForm" class="form hidden">        
+        <p class="form-instruction">Digite seu e-mail para receber o link de redefinição de senha.</p>        
+        <label for="forgotEmail">E-mail</label>        
+        <input type="email" id="forgotEmail" placeholder="seu.email@exemplo.com" required>        
+        <button type="submit" class="btn primary full-width">Enviar Link</button>        
+        <button type="button" class="btn small danger full-width" id="backToLogin">Voltar ao Login</button>      </form>          
+    </div>  
+  </div>  
+  
+  <div id="cartModal" class="modal hidden">    
+    <div class="modal-content">      
+      <button class="close" id="closeCart">×</button>      
+      <h2>Seu Carrinho</h2>      
+      <div id="cartItems" class="cart-items"></div>      
+      <div class="cart-summary">        
+        <strong>Total:</strong> R$ <span id="cartTotal">0.00</span>      </div>      
+      <div class="cart-actions">        
+        <button id="clearCart" class="btn danger small">Esvaziar Carrinho</button>        
+        <button id="checkoutBtn" class="btn primary small">Finalizar Compra</button>      </div>    
+    </div>  
+  </div>  
+  
+  <div id="toast" class="toast hidden"></div>  
+  
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+  <script src="script.js"></script>  
+</body>
+</html>
