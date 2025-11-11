@@ -1,6 +1,6 @@
 # Projeto Altmaisf4 - Loja de jogos digitais
 
-Este repositório contém a documentação, backlog, prototipagem e artefatos do projeto **Altmaisf4**, desenvolvido na plataforma **SITE123**.
+Este repositório contém a documentação, backlog, prototipagem e artefatos do projeto **Altmaisf4**.
 
 ## Estrutura
 - `backlog.md` → lista de funcionalidades planejadas (backlog do projeto)
@@ -15,7 +15,7 @@ Organizar as entregas do projeto acadêmico, incluindo:
 3. Prototipagem
 
 ## Site
-https://altmaisf4.github.io/Altmaisf4/
+ https://altf4-loja.web.app
 
 
 
