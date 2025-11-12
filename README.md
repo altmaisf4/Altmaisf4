@@ -15,7 +15,7 @@ Organizar as entregas do projeto acadêmico, incluindo:
 3. Prototipagem
 
 ## Site
- https://altf4-loja.web.app
+ 
 
 
 
